@@ -10,54 +10,74 @@ body {
   justify-content: center; }
   body .clock {
     border: 7px solid #4a1407;
-    box-shadow: #4a1407 -15px -2px 2px -3px,black -50px -10px 54px -35px,black -45px -20px 40px -60px inset;
+    box-shadow: #4a1407 -15px -2px 2px -3px, black -50px -10px 54px -35px, black -45px -20px 40px -60px inset;
+    min-width: 390px;
     width: 390px;
     height: 420px;
     border-radius: 50%; }
+    body .clock .center {
+      background-color: black;
+      height: 20px;
+      width: 20px;
+      transform: translate(184px, 197px); }
     body .clock .needleHour {
       height: 130px;
       width: 9px;
       background-color: black;
-      position: relative;
-      top: 99px;
-      left: 187px;
-      transform: rotate(0deg); }
+      transform: translate(190px, 80px) rotate(0deg); }
     body .clock .needleMinute {
-      height: 175px;
+      height: 162px;
       width: 8px;
       background-color: black;
-      position: relative;
-      top: -23px;
-      left: 242px;
-      transform: rotateZ(90deg); }
+      transform: translate(246px, -24px) rotate(90deg); }
     body .clock #graduations h1 {
       display: inline-block;
       font-size: 45px; }
-    body .clock #graduations h1:first-child {
+    body .clock #graduations :first-child {
       position: relative;
       top: -300px;
       left: 260px; }
-    body .clock #graduations h1:nth-child(2) {
+    body .clock #graduations :nth-child(2) {
       position: relative;
       top: -242px;
       left: 275px; }
-    body .clock #graduations h1:nth-child(3) {
+    body .clock #graduations :nth-child(3) {
       position: relative;
       top: -166px;
       left: 289px; }
-    body .clock #graduations h1:nth-child(4) {
+    body .clock #graduations :nth-child(4) {
       position: relative;
       top: -90px;
       left: 231px; }
-    body .clock #graduations h1:nth-child(10) {
+    body .clock #graduations :nth-child(5) {
       position: relative;
-      top: -90px;
-      left: 231px; }
-    body .clock #graduations h1:nth-child(11) {
+      top: -25px;
+      left: 165px; }
+    body .clock #graduations :nth-child(6) {
       position: relative;
-      top: -295px;
-      left: -175px; }
-    body .clock #graduations h1:last-child {
+      top: 7px;
+      left: 65px; }
+    body .clock #graduations :nth-child(7) {
+      position: relative;
+      top: -25px;
+      left: -40px; }
+    body .clock #graduations :nth-child(8) {
+      position: relative;
+      top: -94px;
+      left: -113px; }
+    body .clock #graduations :nth-child(9) {
+      position: relative;
+      top: -171px;
+      left: -167px; }
+    body .clock #graduations :nth-child(10) {
+      position: relative;
+      top: -241px;
+      left: -167px; }
+    body .clock #graduations :nth-child(11) {
+      position: relative;
+      top: -300px;
+      left: -166px; }
+    body .clock #graduations :last-child {
       position: relative;
       top: -325px;
       left: -131px; }
