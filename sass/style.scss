@@ -1,6 +1,7 @@
 // sass --watch sass/style.scss:css/style.css
 
 // --- colors --- 
+$clockSize: 395px;
 $backgroundColor: #e6eef0;
 $clockBorder: #4a1407;
 $clockSide: #541d0f;
@@ -8,7 +9,7 @@ $clockShadow: black;  // not confirmed..
 
 // --- Mixins ---
 @mixin position( $top, $left){
-    position: relative;
+    position: absolute;
     top: $top;
     left:$left;
 }
@@ -16,6 +17,7 @@ $clockShadow: black;  // not confirmed..
     box-sizing: border-box;
 }
 body{
+    position: relative;
     font-family: 'Roboto Condensed';
     background-color: $backgroundColor;
     margin: 100px;
@@ -23,33 +25,37 @@ body{
     align-content: center; // why not working? ..
     justify-content: center;
         .clock{
+            position: relative;
             border: 7px solid $clockBorder;
             box-shadow: #4a1407 -15px -2px 2px -3px,
                         black -50px -10px 54px -35px,
                         black -45px -20px 40px -60px inset;
             min-width: 390px;
-            width: 390px;
-            height : 420px;
+            width:$clockSize;
+            height : $clockSize;
             border-radius: 50%;
-            .center{
-                background-color: $clockShadow;
-                height: 20px;
-                width: 20px;
-                transform: translate(184px,197px);
-                // @include position(205px,182px );
-            }
-            .needleHour{
-                height: 130px;
-                width: 9px;
+            .hand{
+                position: absolute;
+                top:50%;
+                left: 50%;
                 background-color: black;
-                // @include position( 99px, 187px );
-                transform: translate(190px, 80px) rotate(0deg); //
+                transform-origin: 90% 90%;
             }
-            .needleMinute{
-                height: 162px;
+            #needleHour{
+                // height: 100px;
+                height: $clockSize/ 4;
                 width: 8px;
-                background-color: black;
-                transform: translate(246px,-24px) rotate(90deg);
+                transform:translate(-50%, -60%) rotate(0deg);
+            }
+            #needleMinute{
+                height: $clockSize/ 3;
+                width: 6px;
+                transform:translate(-50%, -70%) rotate(0deg);
+            }
+            #needleSecond{
+                height: $clockSize/ 2.5;
+                width: 4px;
+                transform:translate(-50%, -75%) rotate(0deg);
             }
             #graduations{
                 h1{
@@ -57,40 +63,40 @@ body{
                     font-size:45px;
                 }
                 & :first-child {
-                    @include position(-300px, 260px );                
+                    @include position(15px, 258px );                
                 }
                 & :nth-child(2){
-                    @include position(-242px, 275px ); 
+                    @include position(72px, 310px ); 
                 }
                 & :nth-child(3){
-                    @include position(-166px, 289px ); 
+                    @include position(141px, 327px ); 
                 }
                 & :nth-child(4){
-                    @include position(-90px, 231px ); 
+                    @include position(205px, 310px ); 
                 }
                 & :nth-child(5){
-                    @include position(-25px, 165px ); 
+                    @include position(266px, 257px ); 
                 }
                 & :nth-child(6){
-                    @include position(7px, 65px ); 
+                    @include position(293px, 180px ); 
                 }
                 & :nth-child(7){
-                    @include position(-25px, -40px ); 
+                    @include position(269px, 99px ); 
                 }
                 & :nth-child(8){
-                    @include position(-94px, -113px ); 
+                    @include position(208px, 48px ); 
                 }
                 & :nth-child(9){
-                    @include position(-171px, -167px ); 
+                    @include position(145px,24px ); 
                 }
                 & :nth-child(10){
-                    @include position(-241px, -167px ); 
+                    @include position(79px,38px ); 
                 }
                 & :nth-child(11){
-                    @include position(-300px, -166px ); 
+                    @include position(14px, 82px ); 
                 }
                 & :last-child{
-                    @include position(-325px, -131px ); 
+                    @include position(-20px, 162px ); 
                 }
             }
         }
