@@ -48,16 +48,16 @@ body {
       left: 310px; }
     body .clock #graduations :nth-child(3) {
       position: absolute;
-      top: 141px;
+      top: 148px;
       left: 327px; }
     body .clock #graduations :nth-child(4) {
       position: absolute;
-      top: 205px;
+      top: 220px;
       left: 310px; }
     body .clock #graduations :nth-child(5) {
       position: absolute;
-      top: 266px;
-      left: 257px; }
+      top: 270px;
+      left: 256px; }
     body .clock #graduations :nth-child(6) {
       position: absolute;
       top: 293px;
@@ -68,11 +68,11 @@ body {
       left: 99px; }
     body .clock #graduations :nth-child(8) {
       position: absolute;
-      top: 208px;
+      top: 220px;
       left: 48px; }
     body .clock #graduations :nth-child(9) {
       position: absolute;
-      top: 145px;
+      top: 148px;
       left: 24px; }
     body .clock #graduations :nth-child(10) {
       position: absolute;
