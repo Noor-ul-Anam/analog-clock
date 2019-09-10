@@ -1,6 +1,3 @@
-// --- variables ---
-
-
 // --- creating graduations in teh clock..
 let graduation = () => {
     let element = document.getElementById('graduations');
@@ -10,7 +7,7 @@ let graduation = () => {
 }
 graduation();
 
-// --- setting up time in teh clock using date methods..
+// --- setting up time in the clock using date methods..
 let date= new Date();
 console.log(date.getHours()-12);
 console.log(date.getMinutes());
@@ -23,7 +20,7 @@ console.log(angleHour);
 console.log(angleMinute);
 console.log(angleSecond);
 
-// --- clock running --- 
+// --- clock hands movement --- 
 let clockGraduation= () =>{   
     setInterval(() => {
         let sec = document.getElementById('needleSecond');
