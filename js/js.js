@@ -22,21 +22,23 @@ console.log(angleSecond);
 
 // --- clock hands movement --- 
 let clockGraduation= () =>{   
+    let sec = document.getElementById('needleSecond');
+    sec.style.transform = `translate(-50%,-70%) rotate(${angleSecond}deg) `;
     setInterval(() => {
-        let sec = document.getElementById('needleSecond');
-        sec.style.transform = `translate(-50%,-75%) rotate(${angleSecond}deg) `;
-        angleSecond> 360? angleSecond= 6: angleSecond= angleSecond+6;
+        let date= new Date();
+        angleSecond = (date.getSeconds()*6);
+        sec.style.transform = `translate(-50%,-70%) rotate(${angleSecond}deg) `;
     }, 1000);
     let min = document.getElementById('needleMinute');
-    min.style.transform = `translate(-50%,-70%) rotate(${angleMinute}deg) `;
+    min.style.transform = `translate(-50%,-67%) rotate(${angleMinute}deg) `;
     setInterval(()=> {
-        min.style.transform =`translate(-50%,-70%) rotate(${angleMinute}deg) `;
+        min.style.transform =`translate(-50%,-67%) rotate(${angleMinute}deg) `;
         angleMinute> 360? angleMinute= 6: angleMinute= angleMinute+6;
     },60000);
     let hour = document.getElementById('needleHour');
-    hour.style.transform = `translate(-50%,-60%) rotate(${angleHour}deg) `;
+    hour.style.transform = `translate(-50%,-62%) rotate(${angleHour}deg) `;
     setInterval(()=> {
-        hour.style.transform =`translate(-50%,-60%) rotate(${angleHour}deg) `;
+        hour.style.transform =`translate(-50%,-62%) rotate(${angleHour}deg) `;
         angleHour> 360?angleHour= 30: angleHour=angleHour+30;
     },3600000);
 }

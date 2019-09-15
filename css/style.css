@@ -17,24 +17,32 @@ body {
     width: 395px;
     height: 395px;
     border-radius: 50%; }
+    body .clock .center {
+      background-color: black;
+      height: 30px;
+      width: 30px;
+      position: absolute;
+      top: 193px;
+      left: 180px;
+      border-radius: 50%; }
     body .clock .hand {
       position: absolute;
       top: 50%;
       left: 50%;
       background-color: black;
-      transform-origin: 90% 90%; }
+      transform-origin: 80% 80%; }
     body .clock #needleHour {
       height: 98.75px;
       width: 8px;
-      transform: translate(-50%, -60%) rotate(0deg); }
+      transform: translate(-50%, -63%) rotate(0deg); }
     body .clock #needleMinute {
       height: 131.6666666667px;
       width: 6px;
-      transform: translate(-50%, -70%) rotate(0deg); }
+      transform: translate(-50%, -67%) rotate(0deg); }
     body .clock #needleSecond {
       height: 158px;
       width: 4px;
-      transform: translate(-50%, -75%) rotate(0deg); }
+      transform: translate(-50%, -70%) rotate(0deg); }
     body .clock #graduations h1 {
       display: inline-block;
       font-size: 45px; }
